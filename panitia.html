@@ -1,0 +1,1321 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+<meta name="theme-color" content="#0d5c46">
+<meta name="description" content="Susunan Kepanitiaan PHBI Isra Mi'raj 1448 H / 2027 - Kp. Rawa Badak Gede, Ds. Laksana, Kec. Pakuhaji, Kab. Tangerang">
+<title>Susunan Kepanitiaan · PHBI Rawa Badak Gede</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+
+<style>
+:root{
+  --green-900:#0a3d2e;
+  --green-700:#0d5c46;
+  --green-500:#1a8a68;
+  --green-100:#e6f2ed;
+  --gold-600:#b8901a;
+  --gold-500:#c9a227;
+  --gold-400:#d4af37;
+  --gold-100:#fdf6e3;
+  --red-500:#c94a4a;
+  --red-100:#fdeeee;
+  --bg:#f6f7f3;
+  --surface:#ffffff;
+  --text:#1a2e26;
+  --muted:#6b7a72;
+  --border:#e5e9e5;
+  --shadow:0 1px 2px rgba(13,92,70,.05), 0 6px 20px rgba(13,92,70,.07);
+  --radius:18px;
+  --radius-sm:12px;
+}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html,body{height:100%}
+body{
+  font-family:'Plus Jakarta Sans',system-ui,-apple-system,sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.5;
+  font-size:15px;
+  -webkit-font-smoothing:antialiased;
+  padding-bottom:120px;
+  position:relative;
+  overflow-x:hidden;
+}
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cg fill='none' stroke='%230d5c46' stroke-width='0.7' opacity='0.5'%3E%3Cpath d='M30 6 L36 24 L54 30 L36 36 L30 54 L24 36 L6 30 L24 24 Z'/%3E%3Ccircle cx='30' cy='30' r='6'/%3E%3C/g%3E%3C/svg%3E");
+  opacity:.055;
+  pointer-events:none;
+  z-index:0;
+}
+
+#capture-area{
+  position:relative;
+  z-index:1;
+  max-width:1100px;
+  margin:0 auto;
+}
+
+/* ============ HERO ============ */
+.hero{
+  position:relative;
+  background:linear-gradient(160deg,#0d5c46 0%,#0a3d2e 60%,#082f24 100%);
+  color:#fff;
+  padding:32px 20px 60px;
+  overflow:hidden;
+  border-bottom-left-radius:28px;
+  border-bottom-right-radius:28px;
+}
+.hero-pattern{
+  position:absolute;
+  inset:0;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='none' stroke='%23d4af37' stroke-width='0.8' opacity='0.4'%3E%3Cpath d='M40 8 L48 32 L72 40 L48 48 L40 72 L32 48 L8 40 L32 32 Z'/%3E%3Ccircle cx='40' cy='40' r='8'/%3E%3C/g%3E%3C/svg%3E");
+  opacity:.18;
+  pointer-events:none;
+}
+.hero-glow{
+  position:absolute;
+  top:-80px;
+  right:-80px;
+  width:260px;height:260px;
+  background:radial-gradient(circle,rgba(212,175,55,.35) 0%,transparent 70%);
+  border-radius:50%;
+  pointer-events:none;
+}
+.hero-content{position:relative;z-index:2;text-align:center}
+.hero-bismillah{
+  font-family:'Amiri',serif;
+  font-size:18px;
+  color:var(--gold-400);
+  opacity:.95;
+  margin-bottom:14px;
+  letter-spacing:.5px;
+}
+.hero h1{
+  font-size:clamp(20px,5vw,30px);
+  font-weight:800;
+  letter-spacing:-.4px;
+  margin-bottom:4px;
+  line-height:1.2;
+}
+.hero h1 span{color:var(--gold-400)}
+.hero-year{
+  font-size:13px;
+  font-weight:600;
+  color:var(--gold-400);
+  letter-spacing:2px;
+  text-transform:uppercase;
+  margin-bottom:12px;
+}
+.hero-loc{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  font-size:12.5px;
+  color:rgba(255,255,255,.82);
+  background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.12);
+  padding:6px 12px;
+  border-radius:999px;
+  backdrop-filter:blur(6px);
+  max-width:100%;
+}
+.hero-loc svg{flex-shrink:0}
+
+/* ============ MAIN ============ */
+main{padding:0 16px}
+.section{margin-top:5px;position:relative;z-index:3}
+.section-title{
+  font-size:14px;
+  font-weight:700;
+  color:var(--green-700);
+  text-transform:uppercase;
+  letter-spacing:1.2px;
+  margin:26px 4px 12px;
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+.section-title::before{
+  content:"";
+  width:4px;height:14px;
+  background:var(--gold-400);
+  border-radius:2px;
+}
+
+/* ============ ORG STRUCTURE ============ */
+.org-panel{
+  background:var(--surface);
+  border-radius:var(--radius);
+  padding:18px;
+  box-shadow:var(--shadow);
+  border:1px solid var(--border);
+  margin-bottom:12px;
+}
+
+/* Dual grid for paired cards */
+.dual-grid{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:10px;
+}
+@media (min-width:520px){
+  .dual-grid{grid-template-columns:1fr 1fr}
+}
+
+/* Small card */
+.small-card{
+  background:#fff;
+  border-radius:14px;
+  padding:16px 14px;
+  border:1px solid var(--border);
+  box-shadow:0 2px 8px rgba(13,92,70,.05);
+  text-align:center;
+  position:relative;
+}
+.sc-role{
+  font-size:10.5px;
+  font-weight:700;
+  color:var(--muted);
+  text-transform:uppercase;
+  letter-spacing:1px;
+  margin-bottom:6px;
+}
+.sc-name{
+  font-size:15px;
+  font-weight:800;
+  color:var(--text);
+  line-height:1.35;
+}
+.sc-name + .sc-name{margin-top:3px}
+
+/* Lead panel (Ketua) */
+.lead-panel{
+  background:linear-gradient(160deg,#0d5c46 0%,#0a3d2e 100%);
+  color:#fff;
+  border-radius:var(--radius);
+  padding:24px 20px;
+  text-align:center;
+  box-shadow:0 10px 30px -8px rgba(13,92,70,.5);
+  position:relative;
+  overflow:hidden;
+}
+.lead-panel::after{
+  content:"";
+  position:absolute;
+  top:-50px;right:-50px;
+  width:180px;height:180px;
+  background:radial-gradient(circle,rgba(212,175,55,.4) 0%,transparent 70%);
+  border-radius:50%;
+}
+.lead-crown{
+  width:52px;height:52px;
+  margin:0 auto 10px;
+  border-radius:50%;
+  background:rgba(255,255,255,.12);
+  border:1.5px solid rgba(212,175,55,.5);
+  display:grid;
+  place-items:center;
+  color:var(--gold-400);
+  position:relative;
+  z-index:2;
+}
+.lead-crown svg{width:24px;height:24px}
+.lead-label{
+  font-size:10.5px;
+  font-weight:700;
+  letter-spacing:2.5px;
+  color:var(--gold-400);
+  text-transform:uppercase;
+  margin-bottom:8px;
+  position:relative;
+  z-index:2;
+}
+.lead-name{
+  font-size:22px;
+  font-weight:800;
+  letter-spacing:-.3px;
+  position:relative;
+  z-index:2;
+}
+.lead-sub{
+  font-size:12px;
+  color:rgba(255,255,255,.7);
+  margin-top:4px;
+  position:relative;
+  z-index:2;
+}
+
+/* Dual panes inside small card (sekretaris + wakil) */
+.small-card .divider{
+  height:1px;
+  background:repeating-linear-gradient(90deg,var(--border) 0 4px,transparent 4px 8px);
+  margin:12px 0 12px;
+}
+
+/* Chips */
+.chip-grid{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+}
+.chip{
+  display:inline-flex;
+  align-items:center;
+  gap:7px;
+  padding:7px 13px 7px 9px;
+  background:var(--green-100);
+  color:var(--green-700);
+  border-radius:999px;
+  font-size:12.5px;
+  font-weight:600;
+  border:1px solid transparent;
+  transition:transform .15s, background .15s;
+}
+.chip:hover{transform:translateY(-1px)}
+.chip-dot{
+  width:6px;height:6px;
+  border-radius:50%;
+  background:var(--green-500);
+  flex-shrink:0;
+}
+.chip.gold{
+  background:var(--gold-100);
+  color:var(--gold-600);
+}
+.chip.gold .chip-dot{background:var(--gold-500)}
+
+/* Seksi card */
+.seksi-card{
+  background:#fff;
+  border-radius:var(--radius);
+  border:1px solid var(--border);
+  box-shadow:var(--shadow);
+  overflow:hidden;
+  margin-bottom:12px;
+}
+.seksi-head{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding:14px 16px;
+  background:linear-gradient(135deg,var(--green-100),#d3e8df);
+  border-bottom:1px solid var(--border);
+}
+.seksi-icon{
+  width:36px;height:36px;
+  border-radius:10px;
+  display:grid;
+  place-items:center;
+  background:var(--green-700);
+  color:#fff;
+  flex-shrink:0;
+  box-shadow:0 4px 10px -2px rgba(13,92,70,.35);
+}
+.seksi-icon svg{width:17px;height:17px}
+.seksi-titles{flex:1;min-width:0}
+.seksi-title{
+  font-size:14.5px;
+  font-weight:800;
+  color:var(--green-900);
+  letter-spacing:-.1px;
+}
+.seksi-sub{
+  font-size:11px;
+  color:var(--green-700);
+  opacity:.75;
+  font-weight:500;
+}
+.seksi-count{
+  font-size:11px;
+  color:var(--green-700);
+  font-weight:700;
+  background:#fff;
+  padding:4px 10px;
+  border-radius:999px;
+  flex-shrink:0;
+}
+.seksi-body{padding:16px}
+
+/* Anggota card */
+.anggota-card{
+  background:linear-gradient(135deg,var(--gold-100),#fff8e5);
+  border:1px solid rgba(212,175,55,.3);
+  border-radius:var(--radius);
+  padding:22px 20px;
+  text-align:center;
+  box-shadow:var(--shadow);
+}
+.anggota-card .anggota-icon{
+  width:44px;height:44px;
+  margin:0 auto 10px;
+  border-radius:12px;
+  background:linear-gradient(135deg,var(--gold-500),var(--gold-600));
+  color:#fff;
+  display:grid;
+  place-items:center;
+  box-shadow:0 6px 14px -4px rgba(184,144,26,.5);
+}
+.anggota-card .anggota-icon svg{width:22px;height:22px}
+.anggota-card .anggota-label{
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:2px;
+  color:var(--gold-600);
+  text-transform:uppercase;
+  margin-bottom:8px;
+}
+.anggota-card .anggota-text{
+  font-size:14px;
+  font-weight:600;
+  color:var(--text);
+  line-height:1.6;
+}
+
+/* ============ FOOTER ============ */
+.footer{
+  text-align:center;
+  padding:32px 16px 20px;
+  color:var(--muted);
+  font-size:12px;
+  position:relative;
+  z-index:2;
+}
+.footer strong{color:var(--green-700);font-weight:700}
+.footer .f-dua{
+  font-family:'Amiri',serif;
+  font-size:13px;
+  color:var(--gold-600);
+  margin-bottom:8px;
+  opacity:.85;
+}
+
+/* ============ FAB ============ */
+.fab-stack{
+  position:fixed;
+  bottom:20px;
+  right:16px;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  z-index:60;
+}
+.fab{
+  width:50px;height:50px;
+  border-radius:50%;
+  border:none;
+  display:grid;
+  place-items:center;
+  cursor:pointer;
+  color:#fff;
+  box-shadow:0 8px 20px -4px rgba(13,92,70,.35);
+  transition:transform .2s ease, box-shadow .2s ease;
+  position:relative;
+}
+.fab:active{transform:scale(.92)}
+.fab svg{width:22px;height:22px}
+.fab-share{background:linear-gradient(135deg,#0d5c46,#0a3d2e)}
+.fab-login{background:#fff;color:var(--green-700);border:1px solid var(--border)}
+.fab-donasi{background:linear-gradient(135deg,#d4af37,#b8901a)}
+.fab-kontak{background:linear-gradient(135deg,#1a8a68,#0d5c46)}
+.fab-label{
+  position:absolute;
+  right:60px;
+  background:var(--green-900);
+  color:#fff;
+  font-size:11.5px;
+  font-weight:600;
+  padding:6px 10px;
+  border-radius:8px;
+  white-space:nowrap;
+  opacity:0;
+  pointer-events:none;
+  transition:opacity .2s;
+}
+@media (hover:hover){
+  .fab:hover .fab-label{opacity:1}
+}
+
+/* ============ MODAL ============ */
+.modal{
+  position:fixed;
+  inset:0;
+  display:none;
+  align-items:flex-end;
+  justify-content:center;
+  z-index:200;
+  background:rgba(10,61,46,.55);
+  backdrop-filter:blur(4px);
+  -webkit-backdrop-filter:blur(4px);
+  padding:0;
+}
+.modal.open{display:flex;animation:fadeIn .2s ease}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes slideUp{from{transform:translateY(30px);opacity:0}to{transform:translateY(0);opacity:1}}
+.modal-card{
+  background:#fff;
+  width:100%;
+  max-width:460px;
+  border-radius:24px 24px 0 0;
+  padding:22px;
+  max-height:92vh;
+  overflow-y:auto;
+  animation:slideUp .3s cubic-bezier(.2,.9,.3,1.1);
+  position:relative;
+}
+@media (min-width:640px){
+  .modal{align-items:center;padding:20px}
+  .modal-card{border-radius:22px}
+}
+.modal-grip{
+  width:40px;height:4px;
+  background:#e0e5e0;
+  border-radius:2px;
+  margin:0 auto 14px;
+}
+@media (min-width:640px){.modal-grip{display:none}}
+.modal-head{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin-bottom:16px;
+  gap:12px;
+}
+.modal-title{
+  font-size:17px;
+  font-weight:800;
+  color:var(--text);
+  letter-spacing:-.2px;
+}
+.modal-sub{font-size:12.5px;color:var(--muted);margin-top:2px}
+.modal-close{
+  background:#f2f4f1;
+  border:none;
+  width:34px;height:34px;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  cursor:pointer;
+  color:var(--text);
+  flex-shrink:0;
+}
+.modal-close svg{width:18px;height:18px}
+
+/* Form */
+.field{margin-bottom:14px}
+.field label{
+  display:block;
+  font-size:12.5px;
+  font-weight:600;
+  color:var(--text);
+  margin-bottom:6px;
+}
+.field input{
+  width:100%;
+  padding:12px 14px;
+  border-radius:12px;
+  border:1.5px solid var(--border);
+  font-family:inherit;
+  font-size:14px;
+  color:var(--text);
+  background:#fafbfa;
+  transition:border-color .15s,background .15s;
+}
+.field input:focus{
+  outline:none;
+  border-color:var(--green-500);
+  background:#fff;
+  box-shadow:0 0 0 3px rgba(26,138,104,.12);
+}
+.btn{
+  width:100%;
+  padding:13px;
+  border-radius:12px;
+  border:none;
+  font-family:inherit;
+  font-size:14.5px;
+  font-weight:700;
+  cursor:pointer;
+  transition:transform .15s,box-shadow .15s;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+}
+.btn:active{transform:scale(.98)}
+.btn-primary{
+  background:linear-gradient(135deg,#0d5c46,#0a3d2e);
+  color:#fff;
+  box-shadow:0 6px 16px -4px rgba(13,92,70,.4);
+}
+.btn-primary svg{width:16px;height:16px}
+
+/* Donasi */
+.rek-item{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  padding:12px 14px;
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:12px;
+  margin-bottom:8px;
+}
+.rek-info{flex:1;min-width:0}
+.rek-info .r-label{
+  font-size:11px;
+  font-weight:700;
+  color:var(--muted);
+  text-transform:uppercase;
+  letter-spacing:.5px;
+}
+.rek-info .r-nomor{
+  font-size:15px;
+  font-weight:800;
+  color:var(--text);
+  font-family:'Plus Jakarta Sans',monospace;
+  letter-spacing:.3px;
+  margin:2px 0;
+  word-break:break-all;
+}
+.rek-info .r-nama{font-size:11.5px;color:var(--muted)}
+.copy-btn{
+  background:var(--green-100);
+  color:var(--green-700);
+  border:none;
+  width:38px;height:38px;
+  border-radius:10px;
+  display:grid;
+  place-items:center;
+  cursor:pointer;
+  flex-shrink:0;
+  transition:background .15s;
+}
+.copy-btn:active{background:#d3e8df}
+.copy-btn svg{width:16px;height:16px}
+
+/* Panitia (kontak) */
+.panitia-item{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding:12px;
+  border-radius:14px;
+  background:#fafbfa;
+  border:1px solid var(--border);
+  margin-bottom:8px;
+  text-decoration:none;
+  color:inherit;
+  transition:background .15s,transform .15s;
+}
+.panitia-item:active{background:#f0f4f1;transform:scale(.99)}
+.panitia-avatar{
+  width:42px;height:42px;
+  border-radius:50%;
+  background:linear-gradient(135deg,#0d5c46,#1a8a68);
+  color:#fff;
+  display:grid;
+  place-items:center;
+  font-weight:800;
+  font-size:15px;
+  flex-shrink:0;
+}
+.panitia-info{flex:1;min-width:0}
+.panitia-info .p-nama{font-size:14px;font-weight:700;color:var(--text)}
+.panitia-info .p-jabatan{font-size:11.5px;color:var(--muted)}
+.panitia-wa{
+  width:38px;height:38px;
+  border-radius:50%;
+  background:#25D366;
+  color:#fff;
+  display:grid;
+  place-items:center;
+  flex-shrink:0;
+}
+.panitia-wa svg{width:18px;height:18px}
+
+/* ============ MODAL IKLAN DONASI (AUTO POPUP) ============ */
+@keyframes iklanFloat{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-6px)}
+}
+.iklan-glow{
+  position:absolute;
+  top:-80px;right:-80px;
+  width:220px;height:220px;
+  background:radial-gradient(circle,rgba(212,175,55,.55) 0%,transparent 70%);
+  border-radius:50%;
+  pointer-events:none;
+}
+.iklan-glow-2{
+  position:absolute;
+  bottom:-90px;left:-70px;
+  width:220px;height:220px;
+  background:radial-gradient(circle,rgba(26,138,104,.55) 0%,transparent 70%);
+  border-radius:50%;
+  pointer-events:none;
+}
+.iklan-icon{
+  width:74px;height:74px;
+  margin:0 auto 12px;
+  border-radius:50%;
+  background:linear-gradient(135deg,rgba(212,175,55,.22),rgba(212,175,55,.08));
+  border:2px solid rgba(212,175,55,.4);
+  display:grid;
+  place-items:center;
+  font-size:36px;
+  animation:iklanFloat 2.4s ease-in-out infinite;
+  position:relative;
+  z-index:2;
+}
+.iklan-badge{
+  display:inline-block;
+  font-size:10.5px;
+  font-weight:800;
+  letter-spacing:1.8px;
+  text-transform:uppercase;
+  color:#d4af37;
+  background:rgba(212,175,55,.14);
+  border:1px solid rgba(212,175,55,.35);
+  padding:5px 12px;
+  border-radius:999px;
+  margin-bottom:14px;
+}
+.iklan-title{
+  font-size:21px;
+  font-weight:800;
+  line-height:1.3;
+  letter-spacing:-.4px;
+  color:#fff;
+  margin-bottom:10px;
+}
+.iklan-title span{color:#d4af37}
+.iklan-desc{
+  font-size:13.5px;
+  line-height:1.65;
+  color:rgba(255,255,255,.82);
+  margin-bottom:22px;
+}
+.iklan-cta{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  width:100%;
+  box-sizing:border-box;
+  padding:15px 18px;
+  border-radius:14px;
+  background:linear-gradient(135deg,#d4af37,#b8901a);
+  color:#fff;
+  font-weight:800;
+  font-size:15px;
+  text-decoration:none;
+  box-shadow:0 12px 28px -8px rgba(212,175,55,.65);
+  border:none;
+  cursor:pointer;
+  transition:transform .18s ease,box-shadow .18s ease;
+  font-family:inherit;
+}
+.iklan-cta:hover{transform:translateY(-2px);box-shadow:0 16px 32px -8px rgba(212,175,55,.75)}
+.iklan-cta:active{transform:translateY(0) scale(.98)}
+.iklan-cta svg{width:18px;height:18px}
+.iklan-skip{
+  display:block;
+  width:100%;
+  background:none;
+  border:none;
+  color:rgba(255,255,255,.55);
+  font-size:12.5px;
+  font-weight:600;
+  font-family:inherit;
+  cursor:pointer;
+  padding:12px 8px 4px;
+  transition:color .15s;
+}
+.iklan-skip:hover{color:rgba(255,255,255,.85)}
+.iklan-trust{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:6px;
+  font-size:11px;
+  color:rgba(255,255,255,.55);
+  margin-top:14px;
+  padding-top:14px;
+  border-top:1px solid rgba(255,255,255,.1);
+}
+.iklan-trust svg{width:12px;height:12px}
+
+/* Toast */
+.toast{
+  position:fixed;
+  left:50%;
+  bottom:96px;
+  transform:translate(-50%,20px);
+  background:var(--green-900);
+  color:#fff;
+  font-size:13px;
+  font-weight:600;
+  padding:11px 18px;
+  border-radius:999px;
+  box-shadow:0 10px 24px -6px rgba(10,61,46,.5);
+  opacity:0;
+  pointer-events:none;
+  transition:opacity .25s,transform .25s;
+  z-index:300;
+  max-width:calc(100% - 32px);
+  text-align:center;
+}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+</style>
+</head>
+<body>
+
+<div id="capture-area">
+  <header class="hero">
+    <div class="hero-pattern"></div>
+    <div class="hero-glow"></div>
+    <div class="hero-content">
+      <div class="hero-bismillah">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ</div>
+      <h1>Susunan <span>Kepanitiaan</span></h1>
+      <div class="hero-year">PHBI · Isra Mi'raj 1448 H</div>
+      <div class="hero-loc">
+        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        Kp. Rawa Badak Gede · Laksana, Pakuhaji
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Penasihat & Pengawas -->
+    <section class="section">
+      <h2 class="section-title">Penasihat &amp; Pengawas</h2>
+      <div class="dual-grid">
+        <div class="small-card">
+          <div class="sc-role">Penasihat</div>
+          <div class="sc-name">Ust. Sihabuddin</div>
+          <div class="sc-name">Ust. Badruddin</div>
+          <div class="sc-name">Ust. Dadang</div>
+        </div>
+        <div class="small-card">
+          <div class="sc-role">Pengawas</div>
+          <div class="sc-name">Ust. Mahfuddin</div>
+          <div class="sc-name">Ust. Amil Said</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pimpinan -->
+    <section class="section">
+      <h2 class="section-title">Pimpinan Panitia</h2>
+      <div class="dual-grid" style="grid-template-columns:1fr;">
+        <div class="lead-panel">
+          <div class="lead-crown">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20h20"/><path d="M4 20V10l4 3 4-7 4 7 4-3v10"/></svg>
+          </div>
+          <div class="lead-label">Ketua Panitia</div>
+          <div class="lead-name">Adi Suganda</div>
+          <div class="lead-sub">Peringatan Isra Mi'raj 1448 H / 2027 M</div>
+        </div>
+        <div class="small-card" style="padding:20px 14px;">
+          <div class="sc-role">Wakil Ketua Panitia</div>
+          <div class="sc-name" style="font-size:18px;">Supendi</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sekretariat & Keuangan -->
+    <section class="section">
+      <h2 class="section-title">Sekretariat &amp; Keuangan</h2>
+      <div class="dual-grid">
+        <div class="small-card">
+          <div class="sc-role">Sekretaris</div>
+          <div class="sc-name">Ade Sobara</div>
+          <div class="divider"></div>
+          <div class="sc-role">Wakil Sekretaris</div>
+          <div class="sc-name">Ramdani</div>
+        </div>
+        <div class="small-card">
+          <div class="sc-role">Bendahara</div>
+          <div class="sc-name">Irwansyah</div>
+          <div class="divider"></div>
+          <div class="sc-role">Wakil Bendahara</div>
+          <div class="sc-name">M. Furqon</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Koordinator Penggalangan Dana -->
+    <section class="section">
+      <h2 class="section-title">Koordinator Penggalangan Dana</h2>
+      <div class="org-panel">
+        <div class="chip-grid">
+          <span class="chip gold"><span class="chip-dot"></span>Taufik</span>
+          <span class="chip gold"><span class="chip-dot"></span>Sarif</span>
+          <span class="chip gold"><span class="chip-dot"></span>Jamal</span>
+          <span class="chip gold"><span class="chip-dot"></span>Deni</span>
+          <span class="chip gold"><span class="chip-dot"></span>Kibau</span>
+          <span class="chip gold"><span class="chip-dot"></span>Enggok</span>
+          <span class="chip gold"><span class="chip-dot"></span>Bagong</span>
+          <span class="chip gold"><span class="chip-dot"></span>Elu</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seksi-seksi -->
+    <section class="section">
+      <h2 class="section-title">Seksi-seksi</h2>
+
+      <!-- Keamanan -->
+      <div class="seksi-card">
+        <div class="seksi-head">
+          <div class="seksi-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div class="seksi-titles">
+            <div class="seksi-title">Seksi Keamanan</div>
+            <div class="seksi-sub">Ketertiban &amp; keamanan acara</div>
+          </div>
+          <span class="seksi-count">12 orang</span>
+        </div>
+        <div class="seksi-body">
+          <div class="chip-grid">
+            <span class="chip"><span class="chip-dot"></span>RW. Juadi / Ijo</span>
+            <span class="chip"><span class="chip-dot"></span>Jaro Jaya</span>
+            <span class="chip"><span class="chip-dot"></span>RT. Andan</span>
+            <span class="chip"><span class="chip-dot"></span>RT. Alim</span>
+            <span class="chip"><span class="chip-dot"></span>Jaro Udin</span>
+            <span class="chip"><span class="chip-dot"></span>Alung</span>
+            <span class="chip"><span class="chip-dot"></span>Jaro Jamin</span>
+            <span class="chip"><span class="chip-dot"></span>RW. Jiman</span>
+            <span class="chip"><span class="chip-dot"></span>Ocang</span>
+            <span class="chip"><span class="chip-dot"></span>Jaro Damri</span>
+            <span class="chip"><span class="chip-dot"></span>RT. Yasin</span>
+            <span class="chip"><span class="chip-dot"></span>DLL</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Konsumsi -->
+      <div class="seksi-card">
+        <div class="seksi-head">
+          <div class="seksi-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3zm0 0v7"/></svg>
+          </div>
+          <div class="seksi-titles">
+            <div class="seksi-title">Seksi Konsumsi</div>
+            <div class="seksi-sub">Kebutuhan makan &amp; minum</div>
+          </div>
+          <span class="seksi-count">15 orang</span>
+        </div>
+        <div class="seksi-body">
+          <div class="chip-grid">
+            <span class="chip"><span class="chip-dot"></span>RT. Udin</span>
+            <span class="chip"><span class="chip-dot"></span>Nasar</span>
+            <span class="chip"><span class="chip-dot"></span>Amang</span>
+            <span class="chip"><span class="chip-dot"></span>RT. Saan</span>
+            <span class="chip"><span class="chip-dot"></span>Candra</span>
+            <span class="chip"><span class="chip-dot"></span>Panca</span>
+            <span class="chip"><span class="chip-dot"></span>RT. Uli</span>
+            <span class="chip"><span class="chip-dot"></span>Misin</span>
+            <span class="chip"><span class="chip-dot"></span>Ijir</span>
+            <span class="chip"><span class="chip-dot"></span>RT. Yuli</span>
+            <span class="chip"><span class="chip-dot"></span>Misna</span>
+            <span class="chip"><span class="chip-dot"></span>Usman</span>
+            <span class="chip"><span class="chip-dot"></span>Ust. Saidun</span>
+            <span class="chip"><span class="chip-dot"></span>Uki</span>
+            <span class="chip"><span class="chip-dot"></span>DLL</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Humas -->
+      <div class="seksi-card">
+        <div class="seksi-head">
+          <div class="seksi-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <div class="seksi-titles">
+            <div class="seksi-title">Seksi Humas</div>
+            <div class="seksi-sub">Hubungan masyarakat &amp; informasi</div>
+          </div>
+          <span class="seksi-count">14 orang</span>
+        </div>
+        <div class="seksi-body">
+          <div class="chip-grid">
+            <span class="chip"><span class="chip-dot"></span>Wadi</span>
+            <span class="chip"><span class="chip-dot"></span>Ust. Rohman</span>
+            <span class="chip"><span class="chip-dot"></span>Tomi Aleng</span>
+            <span class="chip"><span class="chip-dot"></span>Komar</span>
+            <span class="chip"><span class="chip-dot"></span>Syahroni</span>
+            <span class="chip"><span class="chip-dot"></span>Muhidin</span>
+            <span class="chip"><span class="chip-dot"></span>Jaro Sali</span>
+            <span class="chip"><span class="chip-dot"></span>Gr. Toha</span>
+            <span class="chip"><span class="chip-dot"></span>Namang</span>
+            <span class="chip"><span class="chip-dot"></span>Jaro Limi</span>
+            <span class="chip"><span class="chip-dot"></span>Mahdi</span>
+            <span class="chip"><span class="chip-dot"></span>DLL</span>
+            <span class="chip"><span class="chip-dot"></span>RT. Narsin</span>
+            <span class="chip"><span class="chip-dot"></span>Surya</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Anggota -->
+    <section class="section">
+      <h2 class="section-title">Anggota</h2>
+      <div class="anggota-card">
+        <div class="anggota-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <div class="anggota-label">Seluruh Anggota</div>
+        <div class="anggota-text">
+          Seluruh Pemuda, Pemudi dan Masyarakat<br>Rawa Badak Gede
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="f-dua">جَزَاكُمُ اللهُ خَيْرًا</div>
+      <p>Panitia Peringatan Hari Besar Islam (PHBI)<br>
+      <strong>Kp. Rawa Badak Gede · Ds. Laksana, Kec. Pakuhaji</strong><br>
+      Kab. Tangerang, Banten 15570</p>
+    </footer>
+  </main>
+</div>
+
+<!-- FAB Stack -->
+<div class="fab-stack">
+  <button class="fab fab-share" id="fabShare" aria-label="Bagikan">
+    <span class="fab-label">Bagikan / Unduh PNG</span>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+  </button>
+  <button class="fab fab-login" id="fabLogin" aria-label="Masuk Admin">
+    <span class="fab-label">Masuk Admin</span>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg>
+  </button>
+  <button class="fab fab-donasi" id="fabDonasi" aria-label="Donasi">
+    <span class="fab-label">Donasi Sekarang</span>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+  </button>
+  <button class="fab fab-kontak" id="fabKontak" aria-label="Hubungi Panitia">
+    <span class="fab-label">Hubungi Panitia</span>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+  </button>
+</div>
+
+<!-- Modal Iklan Donasi (Auto Popup) -->
+<div class="modal" id="modalIklanDonasi">
+  <div class="modal-card" style="background:linear-gradient(160deg,#0d5c46 0%,#0a3d2e 55%,#082f24 100%);color:#fff;padding:0;overflow:hidden;border-radius:24px 24px 0 0;">
+    <div class="iklan-glow"></div>
+    <div class="iklan-glow-2"></div>
+
+    <button class="modal-close" data-close="modalIklanDonasi" aria-label="Tutup"
+            style="position:absolute;top:14px;right:14px;z-index:5;background:rgba(255,255,255,.12);color:#fff;backdrop-filter:blur(6px);">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+
+    <div style="padding:36px 24px 22px;position:relative;z-index:2;text-align:center;">
+      <div class="iklan-icon">💖</div>
+      <div class="iklan-badge">Mari Berdonasi</div>
+      <h2 class="iklan-title">
+        Dukung Kegiatan <span>Isra Mi'raj 1448 H</span>
+      </h2>
+      <p class="iklan-desc">
+        Setiap donasi Anda sangat berarti untuk menyukseskan acara Isra Mi'raj di <strong style="color:#d4af37;">Kampung Rawa Badak Gede</strong>. Salurkan kebaikan Anda hari ini.
+      </p>
+      <a href="https://sociabuzz.com/phbi_rbg/donate" target="_blank" rel="noopener noreferrer" class="iklan-cta">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        Donasi Sekarang
+      </a>
+      <button class="iklan-skip" data-close="modalIklanDonasi">Nanti saja</button>
+      <div class="iklan-trust">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        Aman &amp; terverifikasi via Sociabuzz
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Login -->
+<div class="modal" id="modalLogin">
+  <div class="modal-card">
+    <div class="modal-grip"></div>
+    <div class="modal-head">
+      <div>
+        <div class="modal-title">Masuk sebagai Admin</div>
+        <div class="modal-sub">Akses halaman input & edit data</div>
+      </div>
+      <button class="modal-close" data-close="modalLogin" aria-label="Tutup">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <form id="formLogin">
+      <div class="field">
+        <label for="loginNama">Nama Admin</label>
+        <input type="text" id="loginNama" placeholder="Masukkan nama admin" autocomplete="off" required>
+      </div>
+      <div class="field">
+        <label for="loginKey">Keyword</label>
+        <input type="password" id="loginKey" placeholder="Masukkan keyword" autocomplete="off" required>
+      </div>
+      <button type="submit" class="btn btn-primary">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg>
+        Masuk
+      </button>
+    </form>
+  </div>
+</div>
+
+<!-- Modal Donasi -->
+<div class="modal" id="modalDonasi">
+  <div class="modal-card">
+    <div class="modal-grip"></div>
+    <div class="modal-head">
+      <div>
+        <div class="modal-title">Salurkan Donasi</div>
+        <div class="modal-sub">Setiap rupiah sangat berarti</div>
+      </div>
+      <button class="modal-close" data-close="modalDonasi" aria-label="Tutup">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div style="padding:4px 18px 18px;">
+      <div style="background:linear-gradient(135deg,rgba(56,189,248,0.08),rgba(168,85,247,0.08));border:1px solid rgba(148,163,184,0.28);border-radius:14px;padding:16px;">
+        <div style="font-size:13.5px;line-height:1.6;color:#334155;margin-bottom:12px;">
+          Donasi bisa melalui <strong>Bank</strong>, <strong>E-Wallet</strong> (DANA / GoPay / OVO), maupun <strong>QRIS</strong>. Jadi silakan kirim bantuan Anda ke nomor rekening atau e-wallet berikut:
+        </div>
+        <div id="rekeningList"></div>
+        <div style="text-align:center;font-size:13px;color:#64748b;margin:16px 0 12px;">
+          atau kamu juga bisa donasi langsung
+        </div>
+        <a href="https://sociabuzz.com/phbi_rbg/donate" target="_blank" rel="noopener noreferrer"
+           style="display:block;width:100%;box-sizing:border-box;text-align:center;padding:13px 16px;border-radius:12px;background:linear-gradient(135deg,#38bdf8,#a855f7);color:#fff;font-weight:700;font-size:14.5px;text-decoration:none;box-shadow:0 6px 18px rgba(56,189,248,0.25);transition:transform .15s ease,box-shadow .15s ease;"
+           onmouseover="this.style.transform='translateY(-1px)';this.style.boxShadow='0 8px 22px rgba(56,189,248,0.35)';"
+           onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 6px 18px rgba(56,189,248,0.25)';">
+          💖 Donasi Sekarang !
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Kontak Panitia -->
+<div class="modal" id="modalKontak">
+  <div class="modal-card">
+    <div class="modal-grip"></div>
+    <div class="modal-head">
+      <div>
+        <div class="modal-title">Hubungi Panitia</div>
+        <div class="modal-sub">Silakan hubungi salah satu panitia</div>
+      </div>
+      <button class="modal-close" data-close="modalKontak" aria-label="Tutup">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div id="panitiaList"></div>
+    <a href="https://raarion.github.io/phbirbg/panitia.html" class="btn btn-primary">Lihat Struktur Susunan Kepanitiaan Lengkap</a>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+/* ============================================================
+   KONFIGURASI
+   ============================================================ */
+const ADMIN_CREDENTIALS = [
+  { nama: "admin",     keyword: "im-2027" },
+  { nama: "panitia1",  keyword: "rawabadakgede-27" },
+  { nama: "panitia2",  keyword: "phbi-rbg27" }
+];
+
+/* Kontak panitia untuk modal "Hubungi Panitia" */
+const PANITIA = [
+  { nama: "Adi Suganda",         jabatan: "Ketua Panitia", wa: "6285893193350" },
+  { nama: "Muhammad Irwansyah",  jabatan: "Bendahara",     wa: "6288294581749" },
+  { nama: "Ade Sobara",          jabatan: "Sekretaris",    wa: "6285888250790" }
+];
+
+/* Data donasi */
+const DONASI = {
+  rekening: [
+    { label: "Dana", nomor: "085770847097", nama: "Muhamad Irwansyah" }
+  ]
+};
+
+/* ============================================================
+   UTIL
+   ============================================================ */
+const $ = id => document.getElementById(id);
+
+function toast(msg) {
+  const el = $("toast");
+  el.textContent = msg;
+  el.classList.add("show");
+  clearTimeout(el._t);
+  el._t = setTimeout(() => el.classList.remove("show"), 2500);
+}
+
+async function copyText(text, label) {
+  try {
+    await navigator.clipboard.writeText(text);
+    toast(`${label} disalin ✓`);
+  } catch {
+    const ta = document.createElement("textarea");
+    ta.value = text; ta.style.position = "fixed"; ta.style.opacity = "0";
+    document.body.appendChild(ta); ta.select();
+    try { document.execCommand("copy"); toast(`${label} disalin ✓`); }
+    catch { toast("Gagal menyalin"); }
+    document.body.removeChild(ta);
+  }
+}
+
+function escapeHtml(s) {
+  return String(s ?? "").replace(/[&<>"']/g, c => ({
+    "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"
+  }[c]));
+}
+
+/* ============================================================
+   MODAL CONTROL
+   ============================================================ */
+function openModal(id) { $(id).classList.add("open"); document.body.style.overflow = "hidden"; }
+function closeModal(id) { $(id).classList.remove("open"); document.body.style.overflow = ""; }
+
+document.querySelectorAll("[data-close]").forEach(btn => {
+  btn.addEventListener("click", () => closeModal(btn.dataset.close));
+});
+document.querySelectorAll(".modal").forEach(m => {
+  m.addEventListener("click", e => { if (e.target === m) closeModal(m.id); });
+});
+document.addEventListener("keydown", e => {
+  if (e.key === "Escape") {
+    document.querySelectorAll(".modal.open").forEach(m => closeModal(m.id));
+  }
+});
+
+/* ============================================================
+   FAB — SHARE / PNG
+   ============================================================ */
+$("fabShare").addEventListener("click", async () => {
+  toast("Menyiapkan gambar…");
+  const el = document.getElementById("capture-area");
+  try {
+    const canvas = await html2canvas(el, {
+      backgroundColor: "#f6f7f3",
+      scale: Math.min(2, window.devicePixelRatio || 1.5),
+      useCORS: true,
+      logging: false,
+      windowWidth: el.scrollWidth,
+      windowHeight: el.scrollHeight
+    });
+    const link = document.createElement("a");
+    const tgl = new Date().toISOString().slice(0, 10);
+    link.download = `kepanitiaan-phbi-2027-${tgl}.png`;
+    link.href = canvas.toDataURL("image/png");
+    link.click();
+    toast("Gambar berhasil diunduh ✓");
+  } catch (e) {
+    console.error(e);
+    toast("Gagal membuat gambar");
+  }
+});
+
+/* ============================================================
+   FAB — LOGIN
+   ============================================================ */
+$("fabLogin").addEventListener("click", () => {
+  const sess = sessionStorage.getItem("admin_session");
+  if (sess) { window.location.href = "admin.html"; return; }
+  openModal("modalLogin");
+});
+
+$("formLogin").addEventListener("submit", (e) => {
+  e.preventDefault();
+  const nama = $("loginNama").value.trim().toLowerCase();
+  const key  = $("loginKey").value.trim();
+  const found = ADMIN_CREDENTIALS.find(c => c.nama.toLowerCase() === nama && c.keyword === key);
+  if (found) {
+    sessionStorage.setItem("admin_session", JSON.stringify({
+      nama: found.nama,
+      login_at: Date.now()
+    }));
+    toast("Berhasil masuk. Mengalihkan…");
+    setTimeout(() => window.location.href = "admin.html", 500);
+  } else {
+    toast("Nama atau keyword salah");
+  }
+});
+
+/* ============================================================
+   FAB — DONASI
+   ============================================================ */
+$("fabDonasi").addEventListener("click", () => {
+  $("rekeningList").innerHTML = DONASI.rekening.map(r => `
+    <div class="rek-item">
+      <div class="rek-info">
+        <div class="r-label">${escapeHtml(r.label)}</div>
+        <div class="r-nomor">${escapeHtml(r.nomor)}</div>
+        <div class="r-nama">a.n. ${escapeHtml(r.nama)}</div>
+      </div>
+      <button class="copy-btn" data-copy="${escapeHtml(r.nomor)}" data-label="${escapeHtml(r.label)}" aria-label="Salin">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+      </button>
+    </div>
+  `).join("");
+
+  $("rekeningList").querySelectorAll(".copy-btn").forEach(btn => {
+    btn.addEventListener("click", () => copyText(btn.dataset.copy, btn.dataset.label));
+  });
+
+  openModal("modalDonasi");
+});
+
+/* ============================================================
+   FAB — KONTAK PANITIA
+   ============================================================ */
+$("fabKontak").addEventListener("click", () => {
+  $("panitiaList").innerHTML = PANITIA.map(p => {
+    const inisial = p.nama.split(" ").map(w => w[0]).slice(0, 2).join("").toUpperCase();
+    const waLink = `https://wa.me/${p.wa}?text=${encodeURIComponent("Assalamu'alaikum " + p.nama + ", saya ingin bertanya tentang kegiatan Isra Mi'raj 2027 di Rawa Badak Gede.")}`;
+    return `
+      <a class="panitia-item" href="${waLink}" target="_blank" rel="noopener">
+        <div class="panitia-avatar">${inisial}</div>
+        <div class="panitia-info">
+          <div class="p-nama">${escapeHtml(p.nama)}</div>
+          <div class="p-jabatan">${escapeHtml(p.jabatan)}</div>
+        </div>
+        <div class="panitia-wa">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        </div>
+      </a>`;
+  }).join("");
+  openModal("modalKontak");
+});
+
+/* ============================================================
+   MODAL IKLAN DONASI — AUTO POPUP SETIAP REFRESH/RELOAD
+   ============================================================ */
+function showIklanDonasi() {
+  if (document.querySelector(".modal.open")) return;
+  openModal("modalIklanDonasi");
+}
+window.addEventListener("load", () => {
+  setTimeout(showIklanDonasi, 500);
+});
+</script>
+</body>
+</html>
