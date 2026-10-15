@@ -497,30 +497,13 @@ main{padding:0 16px}
 }
 
 /* Donasi */
-.qris-wrap{
-  background:#fafbfa;
-  border:1px dashed var(--border);
-  border-radius:16px;
-  padding:14px;
-  text-align:center;
-  margin-bottom:16px;
-}
-.qris-wrap img{
-  width:100%;
-  max-width:260px;
-  border-radius:12px;
-  display:block;
-  margin:0 auto 8px;
-  background:#fff;
-}
-.qris-wrap .qris-hint{font-size:11.5px;color:var(--muted)}
 .rek-item{
   display:flex;
   align-items:center;
   justify-content:space-between;
   gap:12px;
   padding:12px 14px;
-  background:#fafbfa;
+  background:#fff;
   border:1px solid var(--border);
   border-radius:12px;
   margin-bottom:8px;
@@ -598,6 +581,122 @@ main{padding:0 16px}
   flex-shrink:0;
 }
 .panitia-wa svg{width:18px;height:18px}
+
+/* ============ MODAL IKLAN DONASI (AUTO POPUP) ============ */
+@keyframes iklanPulse{
+  0%,100%{transform:scale(1);opacity:1}
+  50%{transform:scale(1.08);opacity:.85}
+}
+@keyframes iklanFloat{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-6px)}
+}
+.iklan-glow{
+  position:absolute;
+  top:-80px;right:-80px;
+  width:220px;height:220px;
+  background:radial-gradient(circle,rgba(212,175,55,.55) 0%,transparent 70%);
+  border-radius:50%;
+  pointer-events:none;
+}
+.iklan-glow-2{
+  position:absolute;
+  bottom:-90px;left:-70px;
+  width:220px;height:220px;
+  background:radial-gradient(circle,rgba(26,138,104,.55) 0%,transparent 70%);
+  border-radius:50%;
+  pointer-events:none;
+}
+.iklan-icon{
+  width:74px;height:74px;
+  margin:0 auto 12px;
+  border-radius:50%;
+  background:linear-gradient(135deg,rgba(212,175,55,.22),rgba(212,175,55,.08));
+  border:2px solid rgba(212,175,55,.4);
+  display:grid;
+  place-items:center;
+  font-size:36px;
+  animation:iklanFloat 2.4s ease-in-out infinite;
+  position:relative;
+  z-index:2;
+}
+.iklan-badge{
+  display:inline-block;
+  font-size:10.5px;
+  font-weight:800;
+  letter-spacing:1.8px;
+  text-transform:uppercase;
+  color:#d4af37;
+  background:rgba(212,175,55,.14);
+  border:1px solid rgba(212,175,55,.35);
+  padding:5px 12px;
+  border-radius:999px;
+  margin-bottom:14px;
+}
+.iklan-title{
+  font-size:21px;
+  font-weight:800;
+  line-height:1.3;
+  letter-spacing:-.4px;
+  color:#fff;
+  margin-bottom:10px;
+}
+.iklan-title span{color:#d4af37}
+.iklan-desc{
+  font-size:13.5px;
+  line-height:1.65;
+  color:rgba(255,255,255,.82);
+  margin-bottom:22px;
+}
+.iklan-cta{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  width:100%;
+  box-sizing:border-box;
+  padding:15px 18px;
+  border-radius:14px;
+  background:linear-gradient(135deg,#d4af37,#b8901a);
+  color:#fff;
+  font-weight:800;
+  font-size:15px;
+  text-decoration:none;
+  box-shadow:0 12px 28px -8px rgba(212,175,55,.65);
+  border:none;
+  cursor:pointer;
+  transition:transform .18s ease,box-shadow .18s ease;
+  font-family:inherit;
+}
+.iklan-cta:hover{transform:translateY(-2px);box-shadow:0 16px 32px -8px rgba(212,175,55,.75)}
+.iklan-cta:active{transform:translateY(0) scale(.98)}
+.iklan-cta svg{width:18px;height:18px}
+.iklan-skip{
+  display:block;
+  width:100%;
+  background:none;
+  border:none;
+  color:rgba(255,255,255,.55);
+  font-size:12.5px;
+  font-weight:600;
+  font-family:inherit;
+  cursor:pointer;
+  padding:12px 8px 4px;
+  transition:color .15s;
+}
+.iklan-skip:hover{color:rgba(255,255,255,.85)}
+.iklan-trust{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:6px;
+  font-size:11px;
+  color:rgba(255,255,255,.55);
+  margin-top:14px;
+  padding-top:14px;
+  border-top:1px solid rgba(255,255,255,.1);
+}
+.iklan-trust svg{width:12px;height:12px}
 
 /* Toast */
 .toast{
@@ -728,6 +827,45 @@ main{padding:0 16px}
   </button>
 </div>
 
+<!-- Modal Iklan Donasi (Auto Popup) -->
+<div class="modal" id="modalIklanDonasi">
+  <div class="modal-card" style="background:linear-gradient(160deg,#0d5c46 0%,#0a3d2e 55%,#082f24 100%);color:#fff;padding:0;overflow:hidden;border-radius:24px 24px 0 0;">
+    <div class="iklan-glow"></div>
+    <div class="iklan-glow-2"></div>
+
+    <button class="modal-close" data-close="modalIklanDonasi" aria-label="Tutup"
+            style="position:absolute;top:14px;right:14px;z-index:5;background:rgba(255,255,255,.12);color:#fff;backdrop-filter:blur(6px);">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+
+    <div style="padding:36px 24px 22px;position:relative;z-index:2;text-align:center;">
+      <div class="iklan-icon">💖</div>
+
+      <div class="iklan-badge">Mari Berdonasi</div>
+
+      <h2 class="iklan-title">
+        Dukung Kegiatan <span>Isra Mi'raj 1448 H</span>
+      </h2>
+
+      <p class="iklan-desc">
+        Setiap donasi Anda sangat berarti untuk menyukseskan acara Isra Mi'raj di <strong style="color:#d4af37;">Kampung Rawa Badak Laksana</strong>. Salurkan kebaikan Anda hari ini.
+      </p>
+
+      <a href="https://sociabuzz.com/phbi_rbg/donate" target="_blank" rel="noopener noreferrer" class="iklan-cta">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        Donasi Sekarang
+      </a>
+
+      <button class="iklan-skip" data-close="modalIklanDonasi">Nanti saja</button>
+
+      <div class="iklan-trust">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        Aman &amp; terverifikasi via Sociabuzz
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- Modal Login -->
 <div class="modal" id="modalLogin">
   <div class="modal-card">
@@ -772,12 +910,12 @@ main{padding:0 16px}
       </button>
     </div>
     <div style="padding:4px 18px 18px;">
-      <div style="background:linear-gradient(135deg,rgba(56,189,248,0.10),rgba(168,85,247,0.10));border:1px solid rgba(148,163,184,0.25);border-radius:14px;padding:16px;">
-        <div style="font-size:14px;line-height:1.6;color:#e5e7eb;margin-bottom:12px;">
+      <div style="background:linear-gradient(135deg,rgba(56,189,248,0.08),rgba(168,85,247,0.08));border:1px solid rgba(148,163,184,0.28);border-radius:14px;padding:16px;">
+        <div style="font-size:13.5px;line-height:1.6;color:#334155;margin-bottom:12px;">
           Donasi bisa melalui <strong>Bank</strong>, <strong>E-Wallet</strong> (DANA / GoPay / OVO), maupun <strong>QRIS</strong>. Jadi silakan kirim bantuan Anda ke nomor rekening atau e-wallet berikut:
         </div>
         <div id="rekeningList"></div>
-        <div style="text-align:center;font-size:13.5px;color:#cbd5e1;margin:16px 0 12px;">
+        <div style="text-align:center;font-size:13px;color:#64748b;margin:16px 0 12px;">
           atau kamu juga bisa donasi langsung
         </div>
         <a href="https://sociabuzz.com/phbi_rbg/donate" target="_blank" rel="noopener noreferrer"
@@ -819,23 +957,22 @@ const SUPABASE_ANON_KEY = "sb_publishable_RDcn69-LiIfWbFs7zW9Bpw_3OtVDSyd";     
 
 /* Kredensial admin (HANYA di JS — tidak aman untuk produksi) */
 const ADMIN_CREDENTIALS = [
-  { nama: "admin",    keyword: "im-2027" },
+  { nama: "admin",     keyword: "im-2027" },
   { nama: "panitia1",  keyword: "rawabadakgede-27" },
-  { nama: "panitia2",keyword: "phbi-rbg27" }
+  { nama: "panitia2",  keyword: "phbi-rbg27" }
 ];
 
 /* Data panitia */
 const PANITIA = [
-  { nama: "Adi Suganda",   jabatan: "Ketua Panitia", wa: "6285893193350" },
-  { nama: "Muhammad Irwansyah",   jabatan: "Bendahara",      wa: "6288294581749" },
-  { nama: "Ade Sobara",     jabatan: "Sekretaris",     wa: "6285888250790" }
+  { nama: "Adi Suganda",         jabatan: "Ketua Panitia", wa: "6285893193350" },
+  { nama: "Muhammad Irwansyah",  jabatan: "Bendahara",     wa: "6288294581749" },
+  { nama: "Ade Sobara",          jabatan: "Sekretaris",    wa: "6285888250790" }
 ];
 
 /* Data donasi */
 const DONASI = {
-  qris: "https://placehold.co/500x500/0d5c46/ffffff?text=QRIS%0AIsra+Mi'raj+2027",
   rekening: [
-    { label: "Dana",           nomor: "085770847097", nama: "Muhamad Irwansyah" }
+    { label: "Dana", nomor: "085770847097", nama: "Muhamad Irwansyah" }
   ]
 };
 
@@ -877,6 +1014,12 @@ async function copyText(text, label) {
   }
 }
 
+function escapeHtml(s) {
+  return String(s ?? "").replace(/[&<>"']/g, c => ({
+    "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"
+  }[c]));
+}
+
 /* ============================================================
    LOAD DATA
    ============================================================ */
@@ -912,11 +1055,11 @@ async function loadData() {
    RENDER STATISTIK
    ============================================================ */
 function renderStats() {
-  const pemasukan  = state.transaksi.filter(t => t.jenis === "pemasukan").reduce((s, t) => s + Number(t.jumlah), 0);
+  const pemasukan   = state.transaksi.filter(t => t.jenis === "pemasukan").reduce((s, t) => s + Number(t.jumlah), 0);
   const pengeluaran = state.transaksi.filter(t => t.jenis === "pengeluaran").reduce((s, t) => s + Number(t.jumlah), 0);
-  const rencana    = state.rencana;
-  const saldo      = pemasukan - pengeluaran;
-  const kekurangan = Math.max(0, rencana - pemasukan);
+  const rencana     = state.rencana;
+  const saldo       = pemasukan - pengeluaran;
+  const kekurangan  = Math.max(0, rencana - pemasukan);
 
   $("statRencana").textContent = fmtRp(rencana);
   $("statMasuk").textContent   = fmtRp(pemasukan);
@@ -955,22 +1098,22 @@ function renderTransaksi() {
   }).join("");
 }
 
-function escapeHtml(s) {
-  return String(s ?? "").replace(/[&<>"']/g, c => ({
-    "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"
-  }[c]));
-}
-
 /* ============================================================
    MODAL CONTROL
    ============================================================ */
 function openModal(id) { $(id).classList.add("open"); document.body.style.overflow = "hidden"; }
 function closeModal(id) { $(id).classList.remove("open"); document.body.style.overflow = ""; }
+
 document.querySelectorAll("[data-close]").forEach(btn => {
   btn.addEventListener("click", () => closeModal(btn.dataset.close));
 });
 document.querySelectorAll(".modal").forEach(m => {
   m.addEventListener("click", e => { if (e.target === m) closeModal(m.id); });
+});
+document.addEventListener("keydown", e => {
+  if (e.key === "Escape") {
+    document.querySelectorAll(".modal.open").forEach(m => closeModal(m.id));
+  }
 });
 
 /* ============================================================
@@ -1030,8 +1173,7 @@ $("formLogin").addEventListener("submit", (e) => {
    FAB — DONASI
    ============================================================ */
 $("fabDonasi").addEventListener("click", () => {
-  $("qrisImg").src = DONASI.qris;
-  $("rekeningList").innerHTML = DONASI.rekening.map((r, i) => `
+  $("rekeningList").innerHTML = DONASI.rekening.map(r => `
     <div class="rek-item">
       <div class="rek-info">
         <div class="r-label">${escapeHtml(r.label)}</div>
@@ -1043,9 +1185,11 @@ $("fabDonasi").addEventListener("click", () => {
       </button>
     </div>
   `).join("");
+
   $("rekeningList").querySelectorAll(".copy-btn").forEach(btn => {
     btn.addEventListener("click", () => copyText(btn.dataset.copy, btn.dataset.label));
   });
+
   openModal("modalDonasi");
 });
 
@@ -1069,6 +1213,20 @@ $("fabKontak").addEventListener("click", () => {
       </a>`;
   }).join("");
   openModal("modalKontak");
+});
+
+/* ============================================================
+   MODAL IKLAN DONASI — AUTO POPUP SETIAP REFRESH/RELOAD
+   ============================================================ */
+function showIklanDonasi() {
+  // Jangan tampilkan jika modal lain sedang terbuka
+  if (document.querySelector(".modal.open")) return;
+  openModal("modalIklanDonasi");
+}
+
+// Tampilkan setelah halaman dimuat (delay kecil agar smooth)
+window.addEventListener("load", () => {
+  setTimeout(showIklanDonasi, 500);
 });
 
 /* ============================================================
