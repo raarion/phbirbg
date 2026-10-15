@@ -771,11 +771,23 @@ main{padding:0 16px}
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
       </button>
     </div>
-    <div class="qris-wrap">
-      <img id="qrisImg" src="" alt="QRIS Donasi">
-      <div class="qris-hint">Scan QRIS dengan aplikasi bank / e-wallet Anda</div>
+    <div style="padding:4px 18px 18px;">
+      <div style="background:linear-gradient(135deg,rgba(56,189,248,0.10),rgba(168,85,247,0.10));border:1px solid rgba(148,163,184,0.25);border-radius:14px;padding:16px;">
+        <div style="font-size:14px;line-height:1.6;color:#e5e7eb;margin-bottom:12px;">
+          Donasi bisa melalui <strong>Bank</strong>, <strong>E-Wallet</strong> (DANA / GoPay / OVO), maupun <strong>QRIS</strong>. Jadi silakan kirim bantuan Anda ke nomor rekening atau e-wallet berikut:
+        </div>
+        <div id="rekeningList"></div>
+        <div style="text-align:center;font-size:13.5px;color:#cbd5e1;margin:16px 0 12px;">
+          atau kamu juga bisa donasi langsung
+        </div>
+        <a href="https://sociabuzz.com/phbi_rbg/donate" target="_blank" rel="noopener noreferrer"
+           style="display:block;width:100%;box-sizing:border-box;text-align:center;padding:13px 16px;border-radius:12px;background:linear-gradient(135deg,#38bdf8,#a855f7);color:#fff;font-weight:700;font-size:14.5px;text-decoration:none;box-shadow:0 6px 18px rgba(56,189,248,0.25);transition:transform .15s ease,box-shadow .15s ease;"
+           onmouseover="this.style.transform='translateY(-1px)';this.style.boxShadow='0 8px 22px rgba(56,189,248,0.35)';"
+           onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 6px 18px rgba(56,189,248,0.25)';">
+          💖 Donasi Sekarang !
+        </a>
+      </div>
     </div>
-    <div id="rekeningList"></div>
   </div>
 </div>
 
