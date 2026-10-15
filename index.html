@@ -698,6 +698,143 @@ main{padding:0 16px}
 }
 .iklan-trust svg{width:12px;height:12px}
 
+/* ============ TOMBOL RAB (BARU) ============ */
+.rab-cta{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  width:100%;
+  padding:16px 18px;
+  border-radius:18px;
+  background:linear-gradient(135deg,#0d5c46 0%,#0a3d2e 100%);
+  color:#fff;
+  border:none;
+  cursor:pointer;
+  text-align:left;
+  font-family:inherit;
+  box-shadow:0 10px 26px -8px rgba(13,92,70,.5);
+  position:relative;
+  overflow:hidden;
+  transition:transform .18s ease, box-shadow .18s ease;
+}
+.rab-cta::after{
+  content:"";
+  position:absolute;
+  top:-40px;right:-40px;
+  width:140px;height:140px;
+  background:radial-gradient(circle,rgba(212,175,55,.35) 0%,transparent 70%);
+  border-radius:50%;
+  pointer-events:none;
+}
+.rab-cta:hover{transform:translateY(-1px);box-shadow:0 14px 32px -8px rgba(13,92,70,.6)}
+.rab-cta:active{transform:scale(.98)}
+.rab-cta-icon{
+  width:44px;height:44px;
+  border-radius:12px;
+  background:rgba(255,255,255,.12);
+  border:1px solid rgba(212,175,55,.35);
+  display:grid;
+  place-items:center;
+  color:var(--gold-400);
+  flex-shrink:0;
+  position:relative;
+  z-index:2;
+}
+.rab-cta-icon svg{width:20px;height:20px}
+.rab-cta-text{flex:1;min-width:0;position:relative;z-index:2}
+.rab-cta-title{
+  font-size:14px;
+  font-weight:800;
+  letter-spacing:-.2px;
+  margin-bottom:3px;
+}
+.rab-cta-sub{
+  font-size:11.5px;
+  color:rgba(255,255,255,.7);
+  font-weight:500;
+}
+.rab-cta-sub strong{color:var(--gold-400);font-weight:800}
+.rab-cta-arrow{
+  width:32px;height:32px;
+  border-radius:50%;
+  background:rgba(255,255,255,.1);
+  display:grid;
+  place-items:center;
+  flex-shrink:0;
+  color:#fff;
+  position:relative;
+  z-index:2;
+}
+.rab-cta-arrow svg{width:16px;height:16px}
+
+/* ============ TABEL RAB (MODAL) ============ */
+.rab-table{
+  width:100%;
+  border-collapse:collapse;
+  font-size:13.5px;
+  border:1px solid var(--border);
+  border-radius:14px;
+  overflow:hidden;
+}
+.rab-table thead th{
+  background:linear-gradient(135deg,var(--green-100),#d3e8df);
+  color:var(--green-900);
+  font-weight:800;
+  font-size:11.5px;
+  text-transform:uppercase;
+  letter-spacing:1px;
+  padding:12px;
+  text-align:left;
+  border-bottom:1px solid var(--border);
+}
+.rab-table td{
+  padding:11px 12px;
+  border-bottom:1px solid var(--border);
+  vertical-align:middle;
+  color:var(--text);
+}
+.rab-table tbody tr:last-child td{border-bottom:none}
+.rab-table tbody tr:nth-child(even) td{background:#fcfdfc}
+.rab-table td.rab-no{
+  text-align:center;
+  font-weight:700;
+  color:var(--muted);
+  width:44px;
+  background:#fafbfa;
+}
+.rab-table td.rab-total{
+  text-align:right;
+  font-weight:700;
+  color:var(--green-700);
+  white-space:nowrap;
+  font-variant-numeric:tabular-nums;
+  width:150px;
+}
+.rab-table td.rab-group{
+  font-weight:700;
+  background:#fafbfa;
+  vertical-align:top;
+  width:110px;
+}
+.rab-table td.rab-sub{
+  padding-left:22px;
+  font-weight:600;
+}
+.rab-table tr.rab-grand td{
+  background:linear-gradient(135deg,var(--green-700),var(--green-900));
+  color:#fff;
+  font-weight:800;
+  font-size:14.5px;
+  padding:14px 12px;
+  border-bottom:none;
+}
+.rab-table tr.rab-grand td.rab-grand-label{text-align:right}
+.rab-table tr.rab-grand td.rab-grand-value{
+  text-align:right;
+  color:var(--gold-400);
+  white-space:nowrap;
+}
+
 /* Toast */
 .toast{
   position:fixed;
@@ -779,6 +916,22 @@ main{padding:0 16px}
         </div>
       </div>
     </section>
+
+<!-- ====== TOMBOL RAB (BARU) ====== -->
+<section class="section" style="margin-top:22px;">
+  <button class="rab-cta" id="btnRAB" aria-label="Lihat Rincian Anggaran Biaya">
+    <div class="rab-cta-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="15" x2="15" y2="15"/><line x1="9" y1="19" x2="13" y2="19"/></svg>
+    </div>
+    <div class="rab-cta-text">
+      <div class="rab-cta-title">Lihat Rincian Anggaran Biaya (RAB)</div>
+      <div class="rab-cta-sub">Total kebutuhan: <strong>Rp 29.100.500</strong></div>
+    </div>
+    <div class="rab-cta-arrow">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+    </div>
+  </button>
+</section>
 
     <section class="section">
       <h2 class="section-title">Rincian Transaksi</h2>
@@ -925,6 +1078,106 @@ main{padding:0 16px}
           💖 Donasi Sekarang !
         </a>
       </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal RAB (Nearly Full-Screen) -->
+<div class="modal" id="modalRAB" style="align-items:center;padding:clamp(25px,4vw,50px);">
+  <div class="modal-card" style="max-width:none;width:100%;height:100%;max-height:none;border-radius:22px;padding:0;display:flex;flex-direction:column;overflow:hidden;">
+    <div style="padding:18px 22px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;gap:12px;flex-shrink:0;background:#fff;">
+      <div>
+        <div class="modal-title">Rincian Rencana Anggaran Biaya</div>
+        <div class="modal-sub">Isra Mi'raj 1448 H / 2027 M</div>
+      </div>
+      <button class="modal-close" data-close="modalRAB" aria-label="Tutup">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div style="flex:1;overflow-y:auto;padding:20px 22px 22px;">
+      <p style="font-size:13px;color:var(--muted);line-height:1.65;margin-bottom:14px;">
+        Rencana Anggaran Biaya (RAB) berikut disusun sebagai acuan dalam pelaksanaan kegiatan Isra Mi'raj Nabi Muhammad SAW tahun 1448 H / 2027 M, yang diselenggarakan oleh Panitia PHBI Kp. Rawa Badak Gede, Desa Laksana, Kecamatan Pakuhaji, Kabupaten Tangerang.
+      </p>
+      <p style="font-size:13px;color:var(--muted);line-height:1.65;margin-bottom:18px;">
+        Anggaran ini mencakup seluruh kebutuhan utama kegiatan, mulai dari honorarium, perlengkapan, konsumsi, hingga biaya tak terduga. Rinciannya sebagai berikut:
+      </p>
+
+      <table class="rab-table">
+        <thead>
+          <tr>
+            <th style="text-align:center">No</th>
+            <th colspan="2">Jenis Anggaran</th>
+            <th style="text-align:right">Total (Rp)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="rab-no">1</td>
+            <td colspan="2">Honorarium Penceramah (2 orang)</td>
+            <td class="rab-total">Rp 8.000.000</td>
+          </tr>
+          <tr>
+            <td class="rab-no">2</td>
+            <td colspan="2">Honorarium Qori (2 orang)</td>
+            <td class="rab-total">Rp 2.000.000</td>
+          </tr>
+          <tr>
+            <td class="rab-no">3</td>
+            <td colspan="2">Peralatan</td>
+            <td class="rab-total">Rp 2.000.000</td>
+          </tr>
+          <tr>
+            <td class="rab-no">4</td>
+            <td colspan="2">Spanduk / Banner</td>
+            <td class="rab-total">Rp 1.000.000</td>
+          </tr>
+          <tr>
+            <td class="rab-no">5</td>
+            <td colspan="2">Sound System</td>
+            <td class="rab-total">Rp 2.500.000</td>
+          </tr>
+          <tr>
+            <td class="rab-no">6</td>
+            <td colspan="2">Dekorasi dan Dokumentasi</td>
+            <td class="rab-total">Rp 2.000.000</td>
+          </tr>
+          <tr>
+            <td class="rab-no">7</td>
+            <td class="rab-group" rowspan="4">Konsumsi</td>
+            <td class="rab-sub">Snack</td>
+            <td class="rab-total">Rp 2.500.000</td>
+          </tr>
+          <tr>
+            <td class="rab-no">8</td>
+            <td class="rab-sub">Buah-buahan</td>
+            <td class="rab-total">Rp 2.500.000</td>
+          </tr>
+          <tr>
+            <td class="rab-no">9</td>
+            <td class="rab-sub">Air Mineral</td>
+            <td class="rab-total">Rp 1.000.000</td>
+          </tr>
+          <tr>
+            <td class="rab-no">10</td>
+            <td class="rab-sub">Jamuan Kyiai dan Tamu VIP</td>
+            <td class="rab-total">Rp 2.500.000</td>
+          </tr>
+          <tr>
+            <td class="rab-no">11</td>
+            <td colspan="2">Kebutuhan Operasional</td>
+            <td class="rab-total">Rp 1.500.000</td>
+          </tr>
+          <tr>
+            <td class="rab-no">12</td>
+            <td colspan="2">Biaya Tak Terduga (±5,82%)</td>
+            <td class="rab-total">Rp 1.600.500</td>
+          </tr>
+          <tr class="rab-grand">
+            <td colspan="3" class="rab-grand-label">Total Keseluruhan</td>
+            <td class="rab-grand-value">Rp 29.100.500</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </div>
 </div>
@@ -1214,6 +1467,13 @@ $("fabKontak").addEventListener("click", () => {
       </a>`;
   }).join("");
   openModal("modalKontak");
+});
+
+/* ============================================================
+   TOMBOL RAB — BUKA MODAL RAB
+   ============================================================ */
+$("btnRAB").addEventListener("click", () => {
+  openModal("modalRAB");
 });
 
 /* ============================================================
