@@ -1570,23 +1570,50 @@ function buildWaMessage() {
   L.push(`📤 Total Pengeluaran  : ${fmtRp(pengeluaran)}`);
   L.push(`⚠️ Kekurangan Dana   : ${fmtRp(kekurangan)}`);
   L.push("");
-  L.push(`📋 *RINCIAN TRANSAKSI (${state.transaksi.length})*`);
+  
+  // ===== RINCIAN DIPISAH: PEMASUKAN DULU, LALU PENGELUARAN =====
+  const listIn  = state.transaksi.filter(t => t.jenis === "pemasukan");
+  const listOut = state.transaksi.filter(t => t.jenis === "pengeluaran");
 
   if (!state.transaksi.length) {
+    L.push("📋 *RINCIAN TRANSAKSI*");
     L.push("_Belum ada transaksi tercatat._");
   } else {
-    state.transaksi.forEach((t, i) => {
-      const isIn = t.jenis === "pemasukan";
-      const sign = isIn ? "+" : "−";
-      L.push(
-        `${i + 1}. [${fmtTanggal(t.tanggal)}] ${t.keterangan || "-"}` +
-        `\n   ${sign} ${fmtRp(t.jumlah)}` +
-        (t.sumber ? ` · ${t.sumber}` : "")
-      );
-    });
+    /* ---------- PEMASUKAN ---------- */
+    L.push(`📥 *RINCIAN PEMASUKAN (${listIn.length})*`);
+    if (!listIn.length) {
+      L.push("_Belum ada pemasukan._");
+    } else {
+      listIn.forEach((t, i) => {
+        L.push(
+          `${i + 1}. [${fmtTanggal(t.tanggal)}] ${t.keterangan || "-"}` +
+          `\n   + ${fmtRp(t.jumlah)}` +
+          (t.sumber ? ` · ${t.sumber}` : "")
+        );
+      });
+      const totalIn = listIn.reduce((s, t) => s + Number(t.jumlah), 0);
+      L.push(`   ── Subtotal: + ${fmtRp(totalIn)}`);
+    }
+    L.push("");
+
+    /* ---------- PENGELUARAN ---------- */
+    L.push(`📤 *RINCIAN PENGELUARAN (${listOut.length})*`);
+    if (!listOut.length) {
+      L.push("_Belum ada pengeluaran._");
+    } else {
+      listOut.forEach((t, i) => {
+        L.push(
+          `${i + 1}. [${fmtTanggal(t.tanggal)}] ${t.keterangan || "-"}` +
+          `\n   − ${fmtRp(t.jumlah)}` +
+          (t.sumber ? ` · ${t.sumber}` : "")
+        );
+      });
+      const totalOut = listOut.reduce((s, t) => s + Number(t.jumlah), 0);
+      L.push(`   ── Subtotal: − ${fmtRp(totalOut)}`);
+    }
+    L.push("");
   }
 
-  L.push("");
   L.push(`🔗 Sumber: ${window.location.origin}${window.location.pathname}`);
   L.push("");
   L.push("جَزَاكُمُ اللهُ خَيْرًا");
@@ -1616,5 +1643,6 @@ $("waMessage").addEventListener("input", () => {
    ============================================================ */
 loadData();
 </script>
+
 </body>
 </html>
